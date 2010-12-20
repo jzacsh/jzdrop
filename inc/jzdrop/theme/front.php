@@ -12,13 +12,19 @@ foreach ($links as $data) {
   $items[] = array('data' => $data, 'class' => 'social');
 }
 
-$opts = array('class' => 'item-list', 'id' => 'sidebar');
+$opts = array('class' => 'item-list', 'id' => 'places');
 $places_list = li($items, 'ul', $opts);
 
-jzdrop_add_css(JZDROP . '/theme/css/main.css');
+jzdrop_add_css(JZDROP . '/theme/css/front.css');
 ?>
 <div id="main">
-  <h3>Places to Find Me</h3>
-  <?php print $places_list; ?>
-  <p>I'm a computer science student, currently working as a Drupal web developer.</p>
+
+  <div class="notes">
+    <?php print $places_list; ?>
+  </div><!--//.notes-->
+
+  <div class="content">
+    <p class="story">I'm a computer science student, currently working as a Drupal web developer.</p>
+  </div><!--//.content-->
+
 </div><!--//#main-->

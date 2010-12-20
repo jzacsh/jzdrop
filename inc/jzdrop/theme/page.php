@@ -2,6 +2,7 @@
 /**
  * Sets the basis for every page.
  */
+jzdrop_add_css(JZDROP . '/theme/css/main.css');
 ?>
 <html>
   <head>

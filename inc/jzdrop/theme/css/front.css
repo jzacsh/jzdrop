@@ -1,0 +1,12 @@
+/**
+ * Front.php specific css styles.
+ */
+.notes {
+    width: 30%;
+    float: left;
+}
+
+.content {
+    float: right;
+    width: 60%;
+}
