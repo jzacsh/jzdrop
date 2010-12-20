@@ -47,12 +47,10 @@ function li($list, $type='ul', $options=array()) {
 
   //build top-level attributes
   $opts = NULL;
-  jd($options, 'top-level');
   if (count($options)) {
     foreach ($options as $attr => $val) {
       $opts .= ' ' . $attr . '="' . $val . '"';
     }
-    unset($attr, $val);
   }
   else {
     $opts = ' class="item-list"';
@@ -75,10 +73,9 @@ function li($list, $type='ul', $options=array()) {
 
     // build item-level attributes
     $data = "\n";
-    jd($item, 'item-level');
     if (is_array($item)) {
       if (array_key_exists('data', $item)) {
-        foreach ($options as $attr => $val) {
+        foreach ($item as $attr => $val) {
           if ($attr == 'class') {
             array_push($css_class, $val);
           }
