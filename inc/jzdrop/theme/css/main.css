@@ -3,6 +3,7 @@
  */
 body {
     font-size: 1.5ex;
+    color: #555555;
 }
 
 a {
@@ -19,6 +20,12 @@ a:focus, a:hover, a:active {
     width: 675px;
     margin: auto;
 }
+
+/* seo-friendly styling */
+#main { position: relative; }
+#content, #notes { position: absolute; }
+#content { right: 0; } 
+#notes { left: 0; }
 
 .item-list {
     list-style-type: none;

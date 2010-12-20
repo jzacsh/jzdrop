@@ -1,12 +1,27 @@
 /**
  * Front.php specific css styles.
  */
-.notes {
-    width: 30%;
-    float: left;
+#notes {
+    margin-top: 5ex;
+    width: 40%;
+    float: right;
 }
 
-.content {
-    float: right;
+ul#places {
+    padding-left: 0;
+}
+
+#content {
+    float: left;
     width: 60%;
+}
+
+.whoami {
+    color: #aaaaaa;
+    position: relative;
+    left: -65%;
+}
+
+.story {
+    text-align: right;
 }
