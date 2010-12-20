@@ -13,6 +13,10 @@ $links[] = l('diaspora', 'https://joindiaspora.com/people/4d06cfa62c174313c9000e
 $opts = array('class' => 'github', 'rel' => 'nofollow', 'target' => '_blank');
 $links[] = l('github', 'http://www.github.com/jzacsh/', $opts);
 
+$opts = array('class' => 'drupal', 'target' => '_blank');
+$drupal = l('drupal', 'http://drupal.org/user/427067');
+$links[] = $drupal;
+
 foreach ($links as $data) {
   $items[] = array('data' => $data, 'class' => 'social');
 }
@@ -26,7 +30,7 @@ jzdrop_add_css(JZDROP . '/theme/css/front.css');
 
   <div id="content">
     <h3 class="whoami">Jonathan Zacsh</h3>
-    <p class="story">I'm a computer science student, currently working as a Drupal web developer.</p>
+    <p class="story">I'm a computer science student, currently working as a <?php print $drupal; ?> web developer.</p>
   </div><!--//#content-->
 
   <div id="notes">
