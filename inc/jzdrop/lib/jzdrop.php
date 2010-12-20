@@ -1,4 +1,98 @@
 <?php
+/**
+ * Basic Library Functions of jzdrop
+ */
+
+
+/**
+ * Helper functions to jzdrop_set_{title,js,css}.
+ */
+function print_each($items = array()) {
+  foreach ($items as $item) {
+    print $item;
+  }
+}
+
+/**
+ * Set the current page title.
+ */
+function jzdrop_set_title($title=NULL) {
+  static $stored_title;
+
+  if (isset($title)) {
+    $stored_title = $title;
+  }
+
+  return $stored_title;
+}
+
+/**
+ * Add js file to header
+ */
+function jzdrop_add_js($file=NULL) {
+  static $js = array();
+  
+  if (isset($file)) {
+    $line  = '<script type="text/javascript"';
+    $line .= 'src="' . $file . '"></script>';
+    $js[] = $line;
+  }
+
+  return $js;
+}
+
+/**
+ * Add css file to header
+ */
+function jzdrop_add_css($file=NULL, $media=all) {
+  static $css = array();
+  
+  if (isset($file)) {
+    $line  = '<link type="text/css" rel="stylesheet"';
+    $line .= ' media="' . $media . '" href="' . $file . '" />';
+    $css[] = $line;
+  }
+
+  return $css;
+}
+
+/**
+ * Get the current page file.
+ */
+function get_page() {
+  $path = get_path();
+
+  switch (count($path)) {
+    case 1:
+      switch (array_pop($path)) {
+        case 'blog':
+          return 'blog';
+          break;
+      }
+      break;
+
+    default:
+      break;
+  }
+
+  //default
+  return 'front';
+}
+
+/**
+ * Returns data on the current path
+ */
+function get_path() {
+  return explode('/', $_GET['q']);
+}
+
+/**
+ * Function to output a particular page
+ */
+function theme($page='front') {
+  $fpath = DROP_ROOT . '/theme/' . $page . '.php';
+  return file_exists($fpath)? $fpath : FALSE;
+}
 
 /**
  * jz Debugger
@@ -15,6 +109,7 @@ function jd($val = NULL, $label = NULL) {
     }
     print_r($val);
     $out = ob_get_clean() . "\n";
+    ob_end_clean();
 
     $fname = '/tmp/jd.txt';
     $fh = fopen($fname, 'a');
