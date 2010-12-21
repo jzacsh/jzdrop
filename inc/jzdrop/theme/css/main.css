@@ -3,12 +3,13 @@
  */
 body {
     font-size: 1.5ex;
-    color: #555555;
+    color: rgba(85, 85, 85, 1);
 }
 
 a:focus, a:hover, a:active { outline: 0; }
+
 a {
-    color: #7a63ff;
+    color: rgba(122, 99, 255, 1);
     text-decoration: none;
 }
 
