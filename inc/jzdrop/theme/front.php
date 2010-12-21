@@ -25,12 +25,14 @@ $opts = array('class' => 'item-list', 'id' => 'places');
 $places_list = li($items, 'ul', $opts);
 
 jzdrop_add_css(JZDROP . '/theme/css/front.css');
+jzdrop_add_css(JZDROP . '/theme/js/front.js');
 ?>
 <div id="main">
 
   <div id="content">
     <h3 class="whoami">Jonathan Zacsh</h3>
-    <p class="story">I'm a computer science student, currently working as a <?php print $drupal; ?> web developer.</p>
+    <p class="story lesser">I'm a computer science student, currently working 
+as a <?php print $drupal; ?> web developer.</p>
   </div><!--//#content-->
 
   <div id="notes">
