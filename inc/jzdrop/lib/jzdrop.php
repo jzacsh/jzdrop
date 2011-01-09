@@ -5,7 +5,8 @@
 
 
 /**
- * Helper functions to jzdrop_set_{title,js,css}.
+ * Helper functions to print jzdrop_set_{title,js,css}.
+ * @param  items  array of resource html strings for css/js
  */
 function print_each($items = array()) {
   foreach ($items as $item) {
@@ -16,7 +17,7 @@ function print_each($items = array()) {
 /**
  * Set the current page title.
  */
-function jzdrop_set_title($title=NULL) {
+function jzdrop_set_title($title = NULL) {
   static $stored_title;
 
   if (isset($title)) {
@@ -29,7 +30,7 @@ function jzdrop_set_title($title=NULL) {
 /**
  * Add js file to header
  */
-function jzdrop_add_js($file=NULL) {
+function jzdrop_add_js($file = NULL) {
   static $js = array();
   
   if (isset($file)) {
@@ -44,7 +45,7 @@ function jzdrop_add_js($file=NULL) {
 /**
  * Add css file to header
  */
-function jzdrop_add_css($file=NULL, $media=all) {
+function jzdrop_add_css($file = NULL, $media = all) {
   static $css = array();
   
   if (isset($file)) {
@@ -89,7 +90,7 @@ function get_path() {
 /**
  * Function to output a particular page
  */
-function theme($page='front') {
+function theme($page = 'front') {
   $fpath = DROP_ROOT . '/theme/' . $page . '.php';
   return file_exists($fpath)? $fpath : FALSE;
 }
@@ -135,7 +136,7 @@ function l($txt, $path, $options) {
 /**
  * Listing function, using <li>
  */
-function li($list, $type='ul', $options=array()) {
+function li($list, $type = 'ul', $options = array()) {
   if (!is_array($list)) {
     return FALSE; //sanity check
   }
