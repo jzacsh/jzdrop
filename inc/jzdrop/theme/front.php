@@ -80,9 +80,9 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
     <h1 class="whoami">Jonathan Zacsh</h1>
     <p class="story section">
       <?php print $gprofile; ?>'m a computer science student, currently working
-      full time as a <?php print $drupal; ?> web developer. I am especially
-      enjoy node.js in my free time, javascript, drupal module development,
-      drupal theming, theming in general.
+      full time as a <?php print $drupal; ?> web developer. In my free time I'm
+      usually studying node.js, client-side javascript, drupal module
+      development, drupal theming, and just theming for the web in general.
     </p>
 
     <h2 class="works">Code</h1>
