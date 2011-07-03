@@ -1,39 +1,81 @@
 /**
  * Front.php specific css styles.
  */
-#notes {
-    margin-top: 8ex;
-    width: 40%;
-    float: right;
-}
-
-ul#places {
-    padding-left: 0;
-}
-
-#content {
-    float: left;
-    width: 60%;
+body {
+    font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+    position: relative;
 }
 
 .whoami {
-    color: #aaaaaa;
-    position: relative;
-    left: 0;
-    margin-top: 0.5ex;
-    font-family: sans;
-    font-size: 1.75em;
-    font-variant: small-caps;
+  text-align: right;
+  font-size: 4em;
+  margin-top: 0;
+  position: relative;
+  top: -10px;
 }
 
-.whoami.lesser {
-    left: -65%;
+.whoami.decolored {
+  color: #ffffff;
+  text-shadow: 0px 0px 18px #888888;
 }
 
-.story {
-    text-align: right;
+.codes dd {
+  margin-bottom: 1em;
 }
 
-.story.lesser {
-    color: rgba(85, 85, 85, 0.20);
+.sidebar .item-list {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.sidebar {
+  border-top: 1px solid #bbbbbb;
+  padding: 1ex;
+  margin-top: 1ex;
+  color: #bbbbbb;
+  background-color: #ffffff;
+  position: absolute;
+  width: inherit;
+  bottom: 0;
+}
+
+.sidebar * {
+  background-color: #ffffff;
+}
+
+.sidebar a {
+  color: #444444;
+}
+
+.sidebar a:hover {
+  color: #7A63FF;
+}
+
+.sidebar li {
+  float: left;
+  display: inline;
+  margin-left: .5em;
+  padding-left: .5em;
+  border-left: 1px solid #888888;
+}
+
+.sidebar li.first {
+  border-left: 0;
+}
+
+.sidebar .elsewhere > * {
+  float: left;
+}
+
+.sidebar #built-ci {
+  float: right;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.elsewhere {
+  float: left;
 }

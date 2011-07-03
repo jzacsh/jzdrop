@@ -2,19 +2,50 @@
 /**
  * Custom page.
  */
-$opts = array('title' => '@jzacsh', 'class' => 'twitter', 'rel' => 'nofollow', 'target' => '_blank');
+
+/**
+ * Miscellaneous links:
+ */
+
+$gprofile = l('I', 'http://profiles.google.com/jzacsh/');
+$opts = array(
+  'title' => 'Comprehensive, feature-rich git-scm manager with a great maintainer.'
+);
+$gitolite = l('gitolite', 'https://github.com/sitaramc/gitolite/wiki/', $opts);
+$cilink = l('build_int',
+  'https://github.com/jzacsh/bin/blob/master/share/build_int',
+  array('title' => 'bash script to handle simple continuous integration builds.'));
+
+/**
+ * Social links:
+ */
+
+$opts = array(
+  'title' => '@jzacsh, chit-chat',
+  'class' => 'twitter',
+);
 $links[] = l('twitter', 'http://www.twitter.com/jzacsh/', $opts);
 
 /* DIASPORA:
-$opts = array('class' => 'diaspora', 'rel' => 'nofollow', 'target' => '_blank');
-$links[] = l('diaspora', 'https://joindiaspora.com/people/4d06cfa62c174313c9000eb4', $opts);
+$opts = array(
+  'class' => 'diaspora',
+  'target' => '_blank',
+);
+$links[] = l('diaspora',
+  'https://joindiaspora.com/people/4d06cfa62c174313c9000eb4', $opts);
 */
 
-$opts = array('class' => 'github', 'rel' => 'nofollow', 'target' => '_blank');
+$opts = array(
+  'class' => 'github',
+  'title' => 'my super public, open source code',
+);
 $links[] = l('github', 'http://www.github.com/jzacsh/', $opts);
 
-$opts = array('class' => 'drupal', 'target' => '_blank');
-$drupal = l('drupal', 'http://drupal.org/user/427067');
+$opts = array('class' => 'code-jzacsh', 'title' => 'my open source code');
+$links[] = l('+code', 'http://code.jzacsh.com/', $opts);
+
+$opts = array('class' => 'drupal', 'title' => 'me in the drupal community');
+$drupal = l('drupal', 'http://drupal.org/user/427067', $opts);
 $links[] = $drupal;
 
 foreach ($links as $data) {
@@ -24,19 +55,73 @@ foreach ($links as $data) {
 $opts = array('class' => 'item-list', 'id' => 'places');
 $places_list = li($items, 'ul', $opts);
 
+/**
+ * Code links:
+ */
+
+$links = $items = array();
+
+//time-clock bash script
+$opts = array();
+$code['punch'] = l('punch',
+  'https://github.com/jzacsh/punch', $opts);
+
+//flash card webapp in node.js
+$opts = array();
+$code['studyjs'] = l('study.js',
+  'http://code.jzacsh.com/?p=foss/flashcards.git', $opts);
+
 jzdrop_add_css(JZDROP . '/theme/css/front.css');
 jzdrop_add_css(JZDROP . '/theme/js/front.js');
 ?>
 <div id="main">
 
   <div id="content">
-    <h3 class="whoami">Jonathan Zacsh</h3>
-    <p class="story lesser">I'm a computer science student, currently working 
-as a <?php print $drupal; ?> web developer.</p>
+    <h1 class="whoami">Jonathan Zacsh</h1>
+    <p class="story">
+      <?php print $gprofile; ?>'m a computer science student, currently working
+      full time as a <?php print $drupal; ?> web developer. I especially enjoy
+      node.js in my free time, javascript, drupal module development, drupal
+      theming, theming in general.
+    </p>
+
+    <h2 class="works">Code</h1>
+    <dl class="codes">
+      <dt><?php print $code['punch']; ?></dt>
+      <dd>Punch is a <acronym title="Command Line Interface">cli</acronym>
+        utility to handle time&ndash;tracking. Though punch was first written in
+        bash for a &quot;punch&ndash;card&quot; model of use, I am now actively
+        porting/rewriting it in node.js to provide a real&ndash;time web
+        interface.</dd>
+
+      <dt><?php print $cilink; ?></dt>
+      <dd>Build&ndash;int a light-weight continous integration script written
+        in bash to be run in cron and build on its own from git by polling for
+        changes.</dd>
+
+      <dt><?php print $code['studyjs']; ?></dt>
+      <dd>Study.js is a flash card application to help you study. Under active
+        development, study.js is being written in node.js with a mongodb data
+        store. To fork, run: <code>git clone
+          git://jzacsh.com:foss/flashcards.git</code></dd>
+    </dl>
   </div><!--//#content-->
 
-  <div id="notes">
-    <?php print $places_list; ?>
-  </div><!--//.notes-->
+  <div class="sidebar notes">
+
+    <div class="elsewhere">
+      <span class="list-title">elsewhere:</span>
+      <?php print $places_list; ?>
+      <div class="clearfix"></div>
+    </div><!--//.elsewhere-->
+
+    <p id="built-ci" class="lesser">
+      This page built continuously with <?php print $cilink; ?> and the help of
+      <?php print $gitolite; ?>.
+    </p>
+
+    <div class="clearfix"></div>
+  </div><!--//.sidebar.notes-->
+  <div class="clearfix"></div>
 
 </div><!--//#main-->

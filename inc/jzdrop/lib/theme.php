@@ -23,6 +23,7 @@ ob_end_clean();
 //print results:
 print $head;
 print $body;
+print_each(jzdrop_add_js());
 ?>
   </body>
 </html>
