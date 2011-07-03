@@ -69,7 +69,7 @@ $code['punch'] = l('punch',
 //flash card webapp in node.js
 $opts = array();
 $code['studyjs'] = l('study.js',
-  'http://code.jzacsh.com/?p=foss/flashcards.git', $opts);
+  'http://code.jzacsh.com/?p=foss/studyjs.git', $opts);
 
 function forklnk($gitpath) {
   $output = NULL;
@@ -119,7 +119,7 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
         <dt><?php print $code['studyjs']; ?></dt>
         <dd>Study.js is a flash card application to help you study. Under active
           development, study.js is being written in node.js with a mongodb data
-          store. <?php print forklnk('git://jzacsh.com/foss/flashcards.git');
+          store. <?php print forklnk('git://jzacsh.com/foss/studyjs.git');
           ?></dd>
       </dl>
     </div>
