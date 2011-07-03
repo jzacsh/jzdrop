@@ -33,13 +33,22 @@ a:hover {
     text-decoration: underline;
 }
 
-code {
+code,
+input[type=text].code {
   font-weight: bold;
   background-color: #eeeeee;
   padding: 1px 2px 1px 2px;
+  border: 0;
   outline: 1px solid #dddddd;
   font-size: 1.15em;
   line-height: inherit;
+  font-family: monospace;
+}
+
+input[type=text].code {
+  font-weight: normal;
+  width: 28em;
+  text-align: center;
 }
 
 /* page sections */

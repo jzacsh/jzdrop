@@ -23,6 +23,19 @@ body {
   margin-bottom: 1em;
 }
 
+.fork-this {
+  text-align: right;
+  display: block;
+  font-style: italic;
+  padding-top: .5ex;
+  margin-top: .5ex;
+  border-top: 1px dotted #cccccc;
+}
+
+.fork-this code {
+  font-style: normal;
+}
+
 .sidebar .item-list {
     list-style-type: none;
     margin-top: 0;

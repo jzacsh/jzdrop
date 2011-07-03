@@ -71,6 +71,14 @@ $opts = array();
 $code['studyjs'] = l('study.js',
   'http://code.jzacsh.com/?p=foss/flashcards.git', $opts);
 
+function forklnk($gitpath) {
+  $output = NULL;
+  $output .= '<span class="fork-this">';
+  $output .= 'To fork this, run: <input class="code" type="text"';
+  $output .= ' value="git clone '. $gitpath . '" / ></span>';
+  return $output;
+}
+
 jzdrop_add_css(JZDROP . '/theme/css/front.css');
 jzdrop_add_css(JZDROP . '/theme/js/front.js');
 ?>
@@ -98,18 +106,20 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
           utility to handle time&ndash;tracking. Though punch was first written in
           bash for a &quot;punch&ndash;card&quot; model of use, I am now actively
           porting/rewriting it in node.js to provide a real&ndash;time web
-          interface.</dd>
+          interface. <?php print forklnk('git://github.com/jzacsh/punch.git');
+          ?></dd>
 
         <dt><?php print $cilink; ?></dt>
         <dd>Build&ndash;int a light-weight continous integration script written
           in bash to be run in cron and build on its own from git by polling for
-          changes.</dd>
+          changes. <?php print forklnk('git://github.com/jzacsh/bin.git');
+          ?></dd>
 
         <dt><?php print $code['studyjs']; ?></dt>
         <dd>Study.js is a flash card application to help you study. Under active
           development, study.js is being written in node.js with a mongodb data
-          store. To fork, run: <code>git clone
-            git://jzacsh.com:foss/flashcards.git</code></dd>
+          store. <?php print forklnk('git://jzacsh.com/foss/flashcards.git');
+          ?></dd>
       </dl>
     </div>
   </div><!--//#content-->
