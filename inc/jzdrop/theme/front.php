@@ -96,10 +96,11 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
     <h2 class="works">Code</h1>
     <div class="section">
       <p>Below are utilities I wrote either because I needed the tool myself or
-        I wanted to play the technology they're built in &#40;or both&#41;.
-        More importantly though, these are utilities I tried to write with some
-        sort of re&ndash;usability in mind, so others can enjoy. If anything
-        comes in handy &#40;or breaks&#41; please feel free to let me know.</p>
+        I wanted to play with the technology they're built in &#40;or
+        both&#41;. More importantly though, these are utilities I tried to
+        write with some sort of re&ndash;usability in mind, so others can
+        enjoy. If anything comes in handy &#40;or breaks&#41; please feel free
+        to let me know.</p>
       <dl class="codes">
         <dt><?php print $code['punch']; ?></dt>
         <dd>Punch is a <acronym title="Command Line Interface">cli</acronym>
