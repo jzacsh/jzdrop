@@ -129,7 +129,6 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
     <div class="elsewhere">
       <span class="list-title">elsewhere:</span>
       <?php print $places_list; ?>
-      <div class="clearfix"></div>
     </div><!--//.elsewhere-->
 
     <p id="built-ci" class="lesser">
