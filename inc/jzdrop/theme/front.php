@@ -7,6 +7,7 @@
  * Miscellaneous links:
  */
 
+$amazon = l('awesome stuff', 'http://amzn.com/w/3BQ5MBGPPCPZS');
 $gprofile = l('I', 'http://profiles.google.com/jzacsh/');
 $opts = array(
   'title' => 'Comprehensive, feature-rich git-scm manager with a great maintainer.'
@@ -90,7 +91,8 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
       <?php print $gprofile; ?>'m a computer science student, currently working
       full time as a <?php print $drupal; ?> web developer. In my free time I'm
       usually studying node.js, client-side javascript, drupal module
-      development, drupal theming, and just theming for the web in general.
+      development, drupal theming, and just theming for the web in general. I
+      am also a lover of the <?php print $amazon; ?> last.fm brings me way.
     </p>
 
     <h2 class="works">Code</h1>
