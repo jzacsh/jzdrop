@@ -78,7 +78,7 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
 
   <div id="content">
     <h1 class="whoami">Jonathan Zacsh</h1>
-    <p class="story">
+    <p class="story section">
       <?php print $gprofile; ?>'m a computer science student, currently working
       full time as a <?php print $drupal; ?> web developer. I am especially
       enjoy node.js in my free time, javascript, drupal module development,
@@ -86,25 +86,32 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
     </p>
 
     <h2 class="works">Code</h1>
-    <dl class="codes">
-      <dt><?php print $code['punch']; ?></dt>
-      <dd>Punch is a <acronym title="Command Line Interface">cli</acronym>
-        utility to handle time&ndash;tracking. Though punch was first written in
-        bash for a &quot;punch&ndash;card&quot; model of use, I am now actively
-        porting/rewriting it in node.js to provide a real&ndash;time web
-        interface.</dd>
+    <div class="section">
+      <p>Below are utilities I wrote either because I needed the tool myself or
+        I wanted to play the technology they're built in &#40;or both&#41;.
+        More importantly though, these are utilities I tried to write with some
+        sort of re&ndash;usability in mind, so others can enjoy. If anything
+        comes in handy &#40;or breaks&#41; please feel free to let me know.</p>
+      <dl class="codes">
+        <dt><?php print $code['punch']; ?></dt>
+        <dd>Punch is a <acronym title="Command Line Interface">cli</acronym>
+          utility to handle time&ndash;tracking. Though punch was first written in
+          bash for a &quot;punch&ndash;card&quot; model of use, I am now actively
+          porting/rewriting it in node.js to provide a real&ndash;time web
+          interface.</dd>
 
-      <dt><?php print $cilink; ?></dt>
-      <dd>Build&ndash;int a light-weight continous integration script written
-        in bash to be run in cron and build on its own from git by polling for
-        changes.</dd>
+        <dt><?php print $cilink; ?></dt>
+        <dd>Build&ndash;int a light-weight continous integration script written
+          in bash to be run in cron and build on its own from git by polling for
+          changes.</dd>
 
-      <dt><?php print $code['studyjs']; ?></dt>
-      <dd>Study.js is a flash card application to help you study. Under active
-        development, study.js is being written in node.js with a mongodb data
-        store. To fork, run: <code>git clone
-          git://jzacsh.com:foss/flashcards.git</code></dd>
-    </dl>
+        <dt><?php print $code['studyjs']; ?></dt>
+        <dd>Study.js is a flash card application to help you study. Under active
+          development, study.js is being written in node.js with a mongodb data
+          store. To fork, run: <code>git clone
+            git://jzacsh.com:foss/flashcards.git</code></dd>
+      </dl>
+    </div>
   </div><!--//#content-->
 
   <div class="sidebar notes">
