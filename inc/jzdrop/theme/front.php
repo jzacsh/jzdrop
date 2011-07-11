@@ -157,23 +157,26 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
       <h3 id="other-code">Other Code</h3>
       <p>Sometimes I'll link to individual scripts I've written, up above in
         the main list, &#40;eg.: etherback&#41;. However, since none of them
-        deserver their very own repo, feel free to just take a peek at my <?php
-        print $bin_scripts; ?> and see if you find anything useful. The most
-        useful stuff is generally in ~/bin/share and ~/bin/lib.</p>
+        deserve their very own repo, you can find them all bundled together in
+        my <?php print $bin_scripts; ?>. The most useful stuff is generally in
+        ~/bin/share and ~/bin/lib.</p>
 
-      <p>Also, a lot of the studying I'm doing and code I'm writing for fun is
-        in public space and open source, just not necessarily up on github. I
-        keep all code that's not on github on <?php print
-        l('my own server using gitolite', 'http://code.jzacsh.com/'); ?>.
+      <h4>Off the Github Track, code.jzacsh.com</h4>
+
+      <p>A lot of code I write for fun or to simply study isn't github-exposure
+        necessary.  but is still open sourced. All code not found on github is
+        served directly from <?php print
+        l('my own server, using gitolite and gitweb',
+          'http://code.jzacsh.com/'); ?>.
       </p>
 
-      <h4>Sneakily forking my stuff...</h4>
+      <h4>Sneakily Forking my Stuff</h4>
       <p>Gitweb sucks for sharing, in comparison to github, but its easy to set
         up and far more personal. If you want to sneak around and clone/mess
         with anything you see in my repos, then feel free - they're available
         on purpose :) &#40;there's plenty on there that you can't see!&#41; The
-        port for git:// protocol is open, so you should be able to clone any
-        project you find listed, by using the URL structure:
+        network port for the git protocol is open on my server, so feel free
+        to clone any project you find listed, by using the URL structure:
         <em class="url">
           git://jzacsh.com/<strong>directory/repo.git</strong>
         </em>
