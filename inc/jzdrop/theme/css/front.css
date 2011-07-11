@@ -6,6 +6,10 @@ body {
     position: relative;
 }
 
+#content {
+  padding-bottom: 3em;
+}
+
 .whoami {
   text-align: right;
   font-size: 4em;
@@ -79,26 +83,34 @@ body {
 }
 
 .sidebar {
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #333333;
   padding: 1ex;
   margin-top: 2ex;
-  color: #bbbbbb;
-  background-color: #ffffff;
-  position: absolute;
+  color: #ffffff;
+  background-color: rgba(92, 85, 78, .90);
+  background-color: rgba(125, 125, 125, .85);
+  position: fixed;
   width: inherit;
   bottom: 0;
 }
 
+.sidebar:hover {
+  background-color: rgba(92, 85, 78, 1);
+  background-color: rgba(125, 125, 125, 1);
+}
+
 .sidebar * {
-  background-color: #ffffff;
+  background-color: none;
 }
 
 .sidebar a {
-  color: #444444;
+  color: #eeeeee;
+  color: #000000;
 }
 
 .sidebar a:hover {
   color: #7A63FF;
+  color: #ffffff;
 }
 
 .sidebar li {
@@ -107,6 +119,7 @@ body {
   margin-left: .5em;
   padding-left: .5em;
   border-left: 1px solid #888888;
+  border-left: 1px solid #383838;
 }
 
 .sidebar li.first {
@@ -122,5 +135,17 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   font-style: italic;
+}
+
+.example {
+  display: block;
+  text-indent: 3em;
+}
+
+.url {
+  color: #000000;
+  font-family: monospace;
+  font-size: 1.35em;
+  text-decoration: underline;
 }
 
