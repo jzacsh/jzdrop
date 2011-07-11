@@ -7,7 +7,7 @@
  * Miscellaneous links:
  */
 
-$amazon = l('awesome stuff', 'http://amzn.com/w/3BQ5MBGPPCPZS');
+$amazon = l('awesome music', 'http://amzn.com/w/3BQ5MBGPPCPZS');
 $gprofile = l('I', 'http://profiles.google.com/jzacsh/');
 $opts = array(
   'title' => 'Comprehensive, feature-rich git-scm manager with a great maintainer.'
