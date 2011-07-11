@@ -60,6 +60,8 @@ $places_list = li($items, 'ul', $opts);
  * Code links:
  */
 
+$bin_scripts = l('personal ~/bin/ scripts', 'https://github.com/jzacsh/bin');
+
 $links = $items = array();
 
 //time-clock bash script
@@ -72,10 +74,12 @@ $opts = array();
 $code['studyjs'] = l('study.js',
   'http://code.jzacsh.com/?p=foss/studyjs.git', $opts);
 
+//drupal-related shell scripts.
 $opts = array();
 $code['drupalsh'] = l('drupalsh',
   'https://github.com/jzacsh/drupalsh', $opts);
 
+//etherpad backup script
 $opts = array();
 $code['etherback'] = l('etherback',
   'https://github.com/jzacsh/bin/blob/master/share/etherback',
@@ -104,7 +108,7 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
       am also a lover of the <?php print $amazon; ?> last.fm brings me way.
     </p>
 
-    <h2 class="works">Code</h1>
+    <h2 id="code" class="works">Code</h2>
     <div class="section">
       <p>Below are utilities I wrote either because I needed the tool myself or
         I wanted to play with the technology they're built in &#40;or
@@ -150,6 +154,36 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
               /></span>
         </dd>
       </dl>
+      <h3 id="other-code">Other Code</h3>
+      <p>Sometimes I'll link to individual scripts I've written, up above in
+        the main list, &#40;eg.: etherback&#41;. However, since none of them
+        deserver their very own repo, feel free to just take a peek at my <?php
+        print $bin_scripts; ?> and see if you find anything useful. The most
+        useful stuff is generally in ~/bin/share and ~/bin/lib.</p>
+
+      <p>Also, a lot of the studying I'm doing and code I'm writing for fun is
+        in public space and open source, just not necessarily up on github. I
+        keep all code that's not on github on <?php print
+        l('my own server using gitolite', 'http://code.jzacsh.com/'); ?>.
+      </p>
+
+      <h4>Sneakily forking my stuff...</h4>
+      <p>Gitweb sucks for sharing, in comparison to github, but its easy to set
+        up and far more personal. If you want to sneak around and clone/mess
+        with anything you see in my repos, then feel free - they're available
+        on purpose :) &#40;there's plenty on there that you can't see!&#41; The
+        port for git:// protocol is open, so you should be able to clone any
+        project you find listed, by using the URL structure:
+        <em class="url">
+          git://jzacsh.com/<strong>directory/repo.git</strong>
+        </em>
+      </p>
+      <p>
+        So for example, to clone the "kittens" project from the URL:
+        <em class="example url">http://code.jzacsh.com/?p=foss/kittens.git</em>
+        just `git clone` the URL:
+        <em class="example url">git://jzacsh.com/foss/kittens.git</em>
+      </p>
     </div>
   </div><!--//#content-->
 
