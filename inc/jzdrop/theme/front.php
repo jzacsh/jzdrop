@@ -126,10 +126,11 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
           ?></dd>
 
         <dt><?php print $cilink; ?></dt>
-        <dd>Build&ndash;int a light-weight continous integration script written
-          in bash to be run in cron and build on its own from git by polling for
-          changes. <?php print forklnk('git://github.com/jzacsh/bin.git');
-          ?></dd>
+        <dd>Build&ndash;int is a light-weight continous integration script
+          written in bash to be run in cron. It works by polling for changes
+          with `git` and rebuilding the target repository if necessary, always
+          leaving out repo files, &#40;eg.: .git/ directory&#41;. <?php print
+          forklnk('git://github.com/jzacsh/bin.git'); ?></dd>
 
         <dt><?php print $code['studyjs']; ?></dt>
         <dd>Study.js is a flash card application to help you study. Under active
