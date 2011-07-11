@@ -72,6 +72,10 @@ $opts = array();
 $code['studyjs'] = l('study.js',
   'http://code.jzacsh.com/?p=foss/studyjs.git', $opts);
 
+$opts = array();
+$code['drupalsh'] = l('drupalsh',
+  'https://github.com/jzacsh/drupalsh', $opts);
+
 function forklnk($gitpath) {
   $output = NULL;
   $output .= '<span class="fork-this">';
@@ -117,6 +121,12 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
           in bash to be run in cron and build on its own from git by polling for
           changes. <?php print forklnk('git://github.com/jzacsh/bin.git');
           ?></dd>
+
+        <dt><?php print $code['drupalsh']; ?></dt>
+        <dd>Drupalsh is a set of bash scripts and functions for Drupal
+          developers who spend a lot of time on the command line doing running
+          through typical drupal&ndash;related tasks. <?php
+          print forklnk('git://github.com/jzacsh/drupalsh'); ?></dd>
 
         <dt><?php print $code['studyjs']; ?></dt>
         <dd>Study.js is a flash card application to help you study. Under active
