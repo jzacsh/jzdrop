@@ -76,6 +76,11 @@ $opts = array();
 $code['drupalsh'] = l('drupalsh',
   'https://github.com/jzacsh/drupalsh', $opts);
 
+$opts = array();
+$code['etherback'] = l('etherback',
+  'https://github.com/jzacsh/bin/blob/master/share/etherback',
+  $opts);
+
 function forklnk($gitpath) {
   $output = NULL;
   $output .= '<span class="fork-this">';
@@ -134,11 +139,16 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
           through typical drupal&ndash;related tasks. <?php
           print forklnk('git://github.com/jzacsh/drupalsh'); ?></dd>
 
-        <dt><?php print $code['studyjs']; ?></dt>
-        <dd>Study.js is a flash card application to help you study. Under active
-          development, study.js is being written in node.js with a mongodb data
-          store. <?php print forklnk('git://jzacsh.com/foss/studyjs.git');
-          ?></dd>
+        <dt><?php print $code['etherback']; ?></dt>
+        <dd>etherback is a bash script to automatically backup any etherpad
+          &#40;or any raw&ndash;text source&#41; document. Specifically, its
+          made to run in cron, as this scirpt doesn't bother creating new
+          backup files if it sees an old backup with the same contents already
+          exists in its destination directory. <span class="fork-this">To fork
+          this, run: <input class="code" type="text"
+                value="curl -s https://raw.github.com/jzacsh/bin/master/share/etherback"
+              /></span>
+        </dd>
       </dl>
     </div>
   </div><!--//#content-->
