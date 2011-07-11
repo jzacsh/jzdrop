@@ -156,11 +156,11 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
         </dd>
       </dl>
       <h3 id="other-code">Other Code</h3>
-      <p>Sometimes I'll link to individual scripts I've written, up above in
-        the main list, &#40;eg.: etherback&#41;. However, since none of them
-        deserve their very own repo, you can find them all bundled together in
-        my <?php print $bin_scripts; ?>. The most useful stuff is generally in
-        ~/bin/share and ~/bin/lib.</p>
+      <p>If I've had particular fun writing a script, I'll probably make note
+        of it in the above list &#40;eg.: etherback&#41;. However, since none
+        of them deserve their very own repo, you can find them all bundled
+        together in my <?php print $bin_scripts; ?>. The most useful stuff is
+        generally in ~/bin/share and ~/bin/lib.</p>
 
       <h4>Off the Github Track, code.jzacsh.com</h4>
 
