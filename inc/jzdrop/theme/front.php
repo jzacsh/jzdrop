@@ -122,6 +122,12 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
           changes. <?php print forklnk('git://github.com/jzacsh/bin.git');
           ?></dd>
 
+        <dt><?php print $code['studyjs']; ?></dt>
+        <dd>Study.js is a flash card application to help you study. Under active
+          development, study.js is being written in node.js with a mongodb data
+          store. <?php print forklnk('git://jzacsh.com/foss/studyjs.git');
+          ?></dd>
+
         <dt><?php print $code['drupalsh']; ?></dt>
         <dd>Drupalsh is a set of bash scripts and functions for Drupal
           developers who spend a lot of time on the command line doing running
