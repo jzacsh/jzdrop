@@ -139,9 +139,9 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
 
         <dt><?php print $code['drupalsh']; ?></dt>
         <dd>Drupalsh is a set of bash scripts and functions for Drupal
-          developers who spend a lot of time on the command line doing running
-          through typical drupal&ndash;related tasks. <?php
-          print forklnk('git://github.com/jzacsh/drupalsh'); ?></dd>
+          developers who spend a lot of time on the command line running
+          through typical drupal&ndash;related tasks. <?php print
+          forklnk('git://github.com/jzacsh/drupalsh'); ?></dd>
 
         <dt><?php print $code['etherback']; ?></dt>
         <dd>etherback is a bash script to automatically backup any etherpad
