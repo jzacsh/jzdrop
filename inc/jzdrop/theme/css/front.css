@@ -92,11 +92,13 @@ body {
   position: fixed;
   width: inherit;
   bottom: 0;
+  box-shadow: 1px -1px 8ex #666666;
 }
 
 .sidebar:hover {
   background-color: rgba(92, 85, 78, 1);
   background-color: rgba(125, 125, 125, 1);
+  box-shadow: 1px -1px 6ex #888888;
 }
 
 .sidebar * {
