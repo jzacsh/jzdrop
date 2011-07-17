@@ -105,7 +105,7 @@ jzdrop_add_css(JZDROP . '/theme/js/front.js');
       full time as a <?php print $drupal; ?> web developer. In my free time I'm
       usually studying node.js, client-side javascript, drupal module
       development, drupal theming, and just theming for the web in general. I
-      am also a lover of the <?php print $amazon; ?> last.fm brings me way.
+      am also a lover of the <?php print $amazon; ?> last.fm brings my way.
     </p>
 
     <h2 id="code" class="works">Code</h2>
